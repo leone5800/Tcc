@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <!-- Inclua os arquivos CSS da biblioteca intl-tel-input -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+  <link rel="stylesheet" href="Css.css">
+</head>
+<body>
+  <h1>Registro</h1>
+  <form id="registerForm">
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br>
+
+    <label for="confirmEmail">Confirmar Email:</label>
+    <input type="email" id="confirmEmail" required><br>
+
+    <label for="username">Nome de Usuário:</label>
+    <input type="text" id="username" required><br>
+
+    <label for="password">Senha:</label>
+    <input type="password" id="password" required><br>
+
+    <div class="dob-title">
+      <label for="dob">Data de Nascimento:</label>
+    </div>
+    
+    <div class="dob-container">
+      <select id="day" required>
+        <option value="" disabled selected>Dia</option>
+        <!-- Opções para os dias serão adicionadas via JavaScript -->
+      </select>
+      <select id="month" required>
+        <option value="" disabled selected>Mês</option>
+        <!-- Opções para os meses serão adicionadas via JavaScript -->
+      </select>
+      <select id="year" required>
+        <option value="" disabled selected>Ano</option>
+        <!-- Opções para os anos serão adicionadas via JavaScript -->
+      </select>
+    </div>
+
+    <label for="gender">Gênero:</label>
+    <select id="gender" required>
+      <option value="male">Masculino</option>
+      <option value="female">Feminino</option>
+      <option value="other">Outro</option>
+    </select><br>
+
+    <label for="phoneNumber">Número de Telefone:</label>
+    <input type="tel" id="phoneNumber" required><br>
+
+    <div class="checkbox-container">
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms" id="termsLabel">Aceitar os <a href="#" id="openModalLink">Termos de Serviço</a></label>
+    </div><br> <!-- Movido a caixa de seleção para após o rótulo -->
+
+    <button type="submit" id="registerButton">Registrar</button>
+  </form>
+
+  <div id="registerSuccess" class="hidden">
+    Registro concluído com sucesso! Verifique seu email para ativar sua conta.
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Termos de Serviço</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere semper dui, nec malesuada quam dapibus sed. Fusce eget volutpat orci. Vestibulum sit amet eleifend magna. Aenean non quam arcu. Integer non malesuada est, sed faucibus libero. Donec volutpat urna vel lectus pretium scelerisque.</p>
+      <!-- Adicione o texto sobre segurança da informação e diretrizes do site aqui -->
+    </div>
+  </div>
+  
+
+  <!-- Inclua os arquivos JavaScript da biblioteca intl-tel-input -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+  <script src="https://apis.google.com/js/api.js"></script>
+
+  <script src="js.js"></script>
+</body>
+</html>

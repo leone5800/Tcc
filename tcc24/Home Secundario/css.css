@@ -1,0 +1,661 @@
+/* Seu CSS aqui */
+:root {
+    --cor-primaria: #4ca80fa8; /* Azul escuro */
+    --cor-secundaria: #10919677; /* Amarelo */
+    --cor-terciaria: #202020 ; /* Amarelo */
+    --cor-texto: #333; /* Preto */
+}
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0 auto; /* Centraliza a página na tela */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 10;
+background-color: white;
+    background-size: 1000%;
+    color: var(--cor-texto);
+    font-size: 16px; /* Tamanho de fonte global reduzido */
+    zoom: 67%;
+} 
+
+
+
+/* Header */
+header {
+    background-color: black;
+    color: #ffffff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; /* Alterado de space-between para center */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+  
+    top: 0;
+    z-index: 999;
+    transition: top 0.3s;
+}
+#img3 {
+    width: 450px;
+  margin-right: 1200px;
+    vertical-align: top;
+  
+    margin-left: -px;
+    margin-top: -250px;
+   
+}
+
+#textoe{
+
+    font-family:'Courier New', Courier, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+
+
+}
+.text-medium {
+    background-color: white;
+    padding: 40px 0; /* Redução do espaço ao redor da seção */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(55, 54, 54, 0.2); /*sombra nas letras*/
+}
+
+.text-medium h2 {
+    margin-bottom: 30px; /* Redução do espaço abaixo do título */
+}
+
+.text-medium p {
+    line-height: 1.6; /* Ajustando o espaçamento entre linhas */
+    font-family:Arial, Helvetica, sans-serif, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: black;
+    
+   
+    
+}
+footer {
+  
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    height: auto;
+}
+
+
+.logo {
+    /* Adicione as propriedades de margem */
+    text-align: center;
+   margin: 0 auto;
+    color: #ffffff;
+    display: flex;
+    justify-content: center; /* Alterado de space-between para center */
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-size: 200%;
+ 
+   
+   
+   
+   
+}
+
+
+
+
+.logo-container {
+    position: fixed; /* Mantém a logo fixa na tela */
+    left: 50%; /* Define a posição inicial no meio */
+    transform: translateX(-50%); /* Centraliza a logo horizontalmente */
+    top: 0; /* Mantém a logo no topo da página */
+    width: 100%; /* Ocupa toda a largura da página */
+}
+
+.logo strong {
+    animation:  5s linear infinite; /* Aplica a animação ao texto com duração de 5 segundos, linearmente, repetindo infinitamente */
+}
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg); /* Começa a partir de 0 graus de rotação */
+    }
+    to {
+        transform: rotate(360deg); /* Gira completamente em 360 graus */
+    }
+}
+/* Adicione estas regras CSS ao seu arquivo CSS */
+
+
+
+.contact-square {
+    position: relative;
+}
+
+.contact-square .fa-plus {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px; /* Tamanho do ícone ajustado para 48px */
+  
+    
+   
+}
+
+
+
+.menu-bars {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Estilo para o menu lateral */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Esconde o menu inicialmente */
+    width: 250px;
+    height: 100%;
+    background: #000000;
+    transition: left 0.3s; /* Alterada a propriedade de transição */
+}
+
+#sidebar.active {
+    left: 0; /* Mostra o menu quando estiver ativo */
+    z-index: 999; /* Adicionado para garantir que o menu fique acima de outros elementos */
+}
+
+/* Estilizando o perfil */
+.profile {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid #555; /* Adiciona uma borda inferior */
+}
+
+/* Estilo para os links do menu */
+.sidebar-menu {
+    padding: 20px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 10px 20px; /* Adiciona padding horizontal */
+    text-decoration: none;
+    font-size: 18px; /* Tamanho da fonte dos links */
+    transition: background-color 0.3s; /* Transição de cor de fundo */
+}
+
+.sidebar-menu a:hover {
+    background: #555;
+}
+
+/* Estilizando os ícones */
+.sidebar-menu i {
+    margin-right: 10px;
+}
+
+/* Estilizando o botão de logoff */
+.logoff-btn {
+    position: absolute;
+    bottom: 20px; /* Distância do botão em relação ao fundo da barra lateral */
+    left: 20px; /* Distância do botão em relação à borda esquerda da barra lateral */
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px; /* Ajuste no tamanho dos botões */
+    border-radius: 6px; /* Bordas dos botões arredondadas */
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 16px; /* Tamanho de fonte dos botões reduzido */
+}
+
+.logoff-btn:hover {
+    background-color: #5c6da8;
+    color: black;
+}
+
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.search-filter {
+    display: flex;
+    align-items: center;
+}
+
+.search-filter input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.search-filter button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-filter select {
+    padding: 8px;
+}
+
+/* Faixa com fundo de cor diferente */
+/* Faixa com fundo de cor diferente */
+
+
+.text-container {
+    max-width: 800px; /* Largura máxima do conteúdo de texto */
+    height: 500px;
+    margin: 0 auto; /* Centralizar o conteúdo horizontalmente */
+    text-align: center; /* Centralizar o texto */
+    color: #fff; /* Cor do texto */
+}
+
+.text-container h2 {
+    font-size: 24px; /* Tamanho do título */
+}
+
+.text-container p {
+    font-size: 16px; /* Tamanho do texto */
+}
+#onda1{
+        
+    float: center;
+  
+    margin-top: -100px;
+
+    width: 100%; /* Defina a largura da imagem */
+    height: 200px;
+
+}
+
+
+/* Estilizando o sub-header */
+.sub-header {
+    background-color: #8B0020; /* Cor de fundo do sub-header */
+    color: #ffffff; /* Cor do texto */
+    padding: 10px;
+    border: 2px solid #000000; /* Adiciona bordas */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    max-width: 1300px; /* Limita o tamanho */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.sub-header h2 {
+    font-size: 18px; /* Tamanho do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.sub-header ul {
+    list-style: none; /* Remover marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinha os itens horizontalmente */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: flex-start; /* Alinha os itens no topo */
+}
+.sub-header li {
+    font-size: 25px; /* Tamanho do texto dos itens */
+    font-family: initial;
+}
+
+.sub-header #search {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens */
+}
+.sub-header #search form {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens */
+    border: 1px solid #fff; /* Adiciona borda ao formulário de busca */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    padding: 3px 10px; /* Reduzindo o padding para mover um pouco para cima e manter a largura do campo de pesquisa */
+}
+
+.sub-header #search input[type="text"] {
+    padding: 5px; /* Adiciona espaço interno ao campo de texto */
+    border: none;
+    border-radius: 0; /* Remove bordas arredondadas do input */
+  border-radius: 5px; /* Fundo transparente */
+    color: #ffffff; /* Cor do texto */
+   font-size: 25px;
+    margin-right: 5px; /* Ajuste de espaçamento entre o ícone de pesquisa e o campo de texto */
+}
+
+.sub-header #search button {
+    background-color: transparent;
+    border: none;
+    padding: 5px; /* Adiciona espaço interno ao botão */
+    cursor: pointer;
+    color: #fff; /* Cor do ícone */
+    font-size: 25px; /* Ajusta o tamanho do ícone da lupa */
+    display: flex; /* Para alinhar ícone e texto verticalmente */
+    align-items: center; /* Alinha itens verticalmente */
+   
+}
+
+.sub-header #search button span {
+    margin-left: 5px; /* Adiciona um espaço entre o ícone e o texto */
+}
+
+/* Adiciona margem à direita do último item do menu */
+.sub-header ul li:last-child {
+    margin-right: 0;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação de fade-out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Aplica a animação de fade-in e fade-out */
+.text-container h2 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.text-container h2.fade-out {
+    animation: fadeOut 1s ease-in-out;
+}
+.new-banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+
+
+#img1 {
+    width: 450px;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    margin-left: 10px;
+    margin-top: -350px;
+    animation: changeColor 4s infinite alternate; /* Aplica a animação para alternar a cor a cada 5 segundos */
+}
+
+#img2 {
+    width: 450px;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    margin-left: 10px;
+    margin-top: -350px;
+    animation: changeColor 4s infinite alternate; /* Aplica a animação para alternar a cor a cada 5 segundos */
+}
+
+
+.text-background {
+    height: 100%;
+background-color: #000000;
+    background-size: 100%; /* Cor de fundo para a faixa de texto */
+    padding: 10px;
+    width: 100%;
+    margin: -360px auto 0; /* Adiciona uma margem superior para descolar do cabeçalho */
+    border: 3px solid #000000;
+}
+
+
+
+
+
+/* Contact Section */
+.contact {
+    background-color: white; /* Cor de fundo */
+    padding: 40px 0; /* Espaçamento ao redor da seção */
+    text-align: center; /* Centralizar conteúdo */
+}
+
+.contact-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Quebra de linha */
+}
+
+.contact-symbol {
+    font-size: 30px;
+    margin: 0 10px; /* Espaçamento entre os símbolos */
+}
+
+.contact-square {
+    width: calc(18% - 10px); /* Largura dos quadrados */
+    height: 500px;
+    margin: 20px; /* Espaçamento entre os quadrados */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+    border: 4px solid #3a3939; /* Borda */
+    border-radius: 10px; /* Borda arredondada */
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease; /* Transição suave */
+   
+}
+@media screen and (max-width: 768px) {
+    .contact-square {
+        width: 80%; /* Define a largura para 90% da largura da tela */
+        max-width: 300px; /* Define a largura máxima dos itens */
+    }
+}
+
+.contact-square:hover {
+    transform: translateY(-5px); /* Efeito de levantamento ao passar o mouse */
+}
+
+.contact-square h3 {
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    font-size: 24px; /* Tamanho da fonte */
+}
+
+.contact-square p {
+    margin-bottom: 10px; /* Espaçamento abaixo dos parágrafos */
+    font-size: 20px; /* Tamanho da fonte */
+    line-height: 1.5; /* Altura da linha */
+}
+
+.contact-square i {
+    font-size: 80px; /* Tamanho do ícone */
+    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+    color: #000000; /* Cor do ícone */
+   
+}
+
+.contact-square img {
+    width: 100px; /* Largura da imagem */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+#back{
+    width: calc(11% - 5px); /* Largura dos quadrados */
+    height: 300px;
+   
+
+
+    
+}
+
+#background-with-back {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: transparent; /* Defina a cor de fundo como transparente */
+}
+
+.back {
+    width: 20px;
+    height: 20px;
+   background: rgb(0, 0, 5);
+    border-radius: 50%;
+    position: absolute;
+    margin-bottom: -40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.back:hover {
+
+    transform: translateY(-5px);
+}
+
+
+.back i {
+
+    width: 100%;
+    height: 100%;
+font-size: 800%;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+}
+
+
+
+
+section{
+    padding-top: 7rem;
+}
+
+section h1{
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.Container-card-1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 2rem;
+   
+}
+
+.cards img{
+    width: 450px;
+    height: auto;
+    transition: 0.35s ease;
+    
+}
+
+.cards img:hover{
+     transform: scale(0.9) translateY(-5px);
+     cursor: pointer;
+   
+     
+}
+
+.cta{
+    color: black;
+    height: 20vh;
+    width: 100%;
+   
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.text-cta{
+    padding-left: 10rem;
+}
+
+
+
+.text-cta h4{
+    font-size: 3.3rem;
+	line-height: 1.2;
+	letter-spacing: .6rem;
+	margin-bottom: 30px;
+}
+
+.text-cta a{
+    background-color: #800020;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+   font-size: 2rem;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.text-cta a:hover{
+    background-color: #111;
+      transform: scaleY(1.2);
+
+}
+
+.promocoes{
+
+    width: calc(70% - 10px); /* Largura dos quadrados */
+    height: 700px;
+    margin: 20px; /* Espaçamento entre os quadrados */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+    border: 4px solid #3a3939; /* Borda */
+    border-radius: 10px; /* Borda arredondada */
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease; /* Transição suave */
+  
+   
+
+}
+.promocoes:hover{
+
+    transform: translateY(-5px);
+
+}
+
+

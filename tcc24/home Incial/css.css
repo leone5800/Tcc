@@ -1,0 +1,391 @@
+/* Adicionando a paleta de cores azul e violeta */
+:root {
+    --cor-primaria: #4ca80fa8; /* Azul escuro */
+    --cor-secundaria: #10919677; /* Amarelo */
+    --cor-terciaria: #202020 ; /* Amarelo */
+    --cor-texto: #333; /* Preto */
+    
+}
+    body {
+        max-width: 100%; /* Largura máxima da página */
+        max-height: 100%;
+        margin: 0 auto; /* Centraliza a página na tela */
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 10;
+     background-color: #000000 ;/* Degradê de cores para o background */
+        background-size: 1000%;
+        color: var(--cor-texto);
+        font-size: 16px; /* Tamanho de fonte global reduzido */
+        zoom: 75%;
+    } 
+    
+
+
+
+/* Header */
+header {
+    background-color: black;
+    color: #ffffff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; /* Alterado de space-between para center */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+  
+    top: 0;
+    z-index: 999;
+    transition: top 0.3s;
+}
+
+
+.logo {
+    /* Adicione as propriedades de margem */
+    text-align: center;
+   margin: 0 auto;
+    color: #ffffff;
+    display: flex;
+    justify-content: center; /* Alterado de space-between para center */
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-size: 200%;
+ 
+   
+   
+   
+   
+}
+
+
+
+
+.logo-container {
+    position: fixed; /* Mantém a logo fixa na tela */
+    left: 50%; /* Define a posição inicial no meio */
+    transform: translateX(-50%); /* Centraliza a logo horizontalmente */
+    top: 0; /* Mantém a logo no topo da página */
+    width: 100%; /* Ocupa toda a largura da página */
+}
+
+nav {
+    display: flex;
+    margin-right: 10px; /* Espaçamento da navegação reduzido */
+}
+
+
+.login-register {
+    display: flex;
+
+}
+
+.login-button,
+.register-button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px; /* Ajuste no tamanho dos botões */
+    border-radius: 6px; /* Bordas dos botões arredondadas */
+    margin-right: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 25px; /* Tamanho de fonte dos botões reduzido */
+
+}
+
+.login-button:hover,
+.register-button:hover {
+    background-color: #9c1414;
+    color: rgb(250, 248, 248);
+}
+
+#img1 {
+    width: 1050px;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    margin-right: -300px;
+    margin-top: -100px;
+    animation: changeColor 4s infinite alternate; /* Aplica a animação para alternar a cor a cada 5 segundos */
+}
+
+#img2 {
+    width: 1050px;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    margin-left: -300px;
+    margin-top: -100px;
+    animation: changeColor 4s infinite alternate; /* Aplica a animação para alternar a cor a cada 5 segundos */
+}
+
+
+/* Hero Section */
+.hero {
+   background-color: #000000;
+    text-align: center;
+    padding: 150px 0; /* Redução do padding na seção hero */
+}
+
+.cta-button {
+    background-color: #ff3232;
+    color: #fefefe;
+    padding: 20px 150px; /* Aumentando o tamanho do botão */
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 20px; /* Tamanho de fonte do botão reduzido */
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: rgb(246, 244, 244); /* Tom mais escuro ao passar o mouse */
+    color: #000;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Adiciona quebra de linha para os itens */
+    margin-top: 50px; /* Espaçamento acima da seção "Sobre" */
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Adiciona quebra de linha para os itens */
+    margin-top: 50px; /* Espaçamento acima da seção "Sobre" */
+}
+
+.about-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; /* Espaçamento entre os itens */
+    padding: 30px; /* Preenchimento interno dos itens */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    width: 300px; /* Largura dos itens */
+    height: 400px; /* Altura dos itens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+.about-item:hover {
+    transform: translateY(-5px); /* Efeito de levantamento ao passar o mouse */
+}
+
+.about-item h2 {
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: 24px; /* Tamanho da fonte do título */
+    text-align: center; /* Centraliza o texto */
+}
+
+.about-item p {
+    text-align: center; /* Centraliza o texto */
+    font-size: 18px; /* Tamanho da fonte do texto */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+
+.about-item img {
+    width: 150px; /* Define o tamanho fixo para as imagens */
+    height: 150px; /* Define o tamanho fixo para as imagens */
+    border-radius: 50%; /* Torna as imagens circulares */
+    margin-bottom: 10px; /* Espaçamento abaixo das imagens */
+}
+
+
+
+/* Text Medium Section */
+.text-medium {
+    background-color: #f9f9f9;
+    padding: 40px 0; /* Redução do espaço ao redor da seção */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(55, 54, 54, 0.2); /*sombra nas letras*/
+}
+
+.text-medium h2 {
+    margin-bottom: 30px; /* Redução do espaço abaixo do título */
+}
+
+.text-medium p {
+    line-height: 1.6; /* Ajustando o espaçamento entre linhas */
+    font-family:Arial, Helvetica, sans-serif, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: black;
+    
+   
+    
+}
+
+
+    
+
+/* FAQ Section */
+.faq {
+    background-color: #f5f5f5;
+    padding: 40px 0; /* Redução do espaço ao redor da seção */
+    text-align: center;
+   
+}
+
+.faq-item {
+    margin-bottom: 30px; /* Redução do espaço entre os itens */
+   
+}
+
+.faq-question {
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 16px;
+    background-color:#000000;
+    color:white;
+    width: 600px;
+    align-items: center;
+     margin: 0 auto;
+   
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    color: #000;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f9f9f9; /* Cor de fundo */
+    padding: 40px 0; /* Espaçamento ao redor da seção */
+    text-align: center; /* Centralizar conteúdo */
+}
+
+.contact-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Quebra de linha */
+}
+
+.contact-symbol {
+    font-size: 30px;
+    margin: 0 10px; /* Espaçamento entre os símbolos */
+}
+
+.contact-square {
+    width: calc(25% - 40px); /* Largura dos quadrados */
+    height: 400px;
+    margin: 20px; /* Espaçamento entre os quadrados */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+    border: 2px solid #000; /* Borda */
+    border-radius: 10px; /* Borda arredondada */
+    background-color: #fff; /* Cor de fundo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+@media screen and (max-width: 768px) {
+    .contact-square {
+        width: 90%; /* Define a largura para 90% da largura da tela */
+        max-width: 300px; /* Define a largura máxima dos itens */
+    }
+}
+
+.contact-square:hover {
+    transform: translateY(-5px); /* Efeito de levantamento ao passar o mouse */
+}
+
+.contact-square h3 {
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    font-size: 24px; /* Tamanho da fonte */
+}
+
+.contact-square p {
+    margin-bottom: 10px; /* Espaçamento abaixo dos parágrafos */
+    font-size: 20px; /* Tamanho da fonte */
+    line-height: 1.5; /* Altura da linha */
+}
+
+.contact-square i {
+    font-size: 80px; /* Tamanho do ícone */
+    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+    color: #5c6da8; /* Cor do ícone */
+   
+}
+
+.contact-square img {
+    width: 100px; /* Largura da imagem */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+
+
+
+
+
+/* Text Medium Section */
+.text-medium {
+    background-color: #f9f9f9;
+    padding: 40px 0; /* Redução do espaço ao redor da seção */
+    text-align: center;
+   
+}
+
+.text-medium h2 {
+    margin-bottom: 30px; /* Redução do espaço abaixo do título */
+}
+
+.text-medium p {
+    line-height: 1.6; /* Ajustando o espaçamento entre linhas */
+}
+
+#onda2{
+        
+    float: center;
+  
+    margin-top: -100px;
+
+    width: 100%; /* Defina a largura da imagem */
+    height: 150px;
+
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #ff2a2a; /* Tom mais escuro ao passar o mouse */
+}
+#qrcode {
+
+width: 100px;
+height: 100px;
+margin-top: 25px;
+
+}
