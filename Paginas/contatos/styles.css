@@ -1,0 +1,103 @@
+body {
+    color: rgb(255, 255, 255);
+ background-color: #11b5f7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+}
+
+.center {
+    text-align: center;
+}
+
+h1 {
+    
+    background: linear-gradient(to top, #000000, #004cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    margin: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 2px;
+}
+
+.container {
+    padding: 0px 50px;
+}
+
+nav a {
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #5BBE42;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Empilha os campos verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 70vh; /* Define a altura do formulário para ocupar toda a altura da tela */
+    margin-top: -50px; /* Ajusta o formulário para cima */
+    border-left: 5rem; /* Adicione a borda esquerda conforme especificado */
+}
+
+.contact-form input {
+    width: 300px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-radius: 10px;
+}
+
+
+
+.contact-form input[type=text] {
+    height: 100px;
+}
+#n{
+    border: floralwhite 10px; 
+}
+
+button {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 9px solid #000000; /* Adiciona uma borda sólida preta */
+    box-shadow: 0px 2px 4px rgb(0, 0, 0); /* Adiciona uma sombra */
+    width: 100px;
+    height: 30px;
+}
