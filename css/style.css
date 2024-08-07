@@ -1,11 +1,14 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 body {
     background-color: #fffdff;
     margin: 0;
 }
 
 header {
-    background-color: #1c472c;
-    width: 100%;
+    
+    background-color: #067b31;
     height: 110px;
     display: flex;
     align-items: center;
@@ -20,14 +23,20 @@ header > img {
 
 .titulos {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 100px;
+    width: 100%;
+    font-family: "IBM Plex Sans", sans-serif;
+    justify-content: end;
+    align-items: end;
+    letter-spacing: 1px;
+    margin-right: 50px;
+    
 }
 
 .titulo {
-    font-size: 25px;
+    font-size: 20px;
     color: #ffdd25;
+    font-weight: normal;
+    
 }
 
 .titulo a {
@@ -199,4 +208,14 @@ header .titulo a:hover {
 
 .frase .highlight {
     color: #C98744;
+}
+/*media queries*/
+@media(max-width:1350px){
+    .titulos h1{
+        flex-direction: column;
+        display: flex;
+    } 
+    .titulos.active h1 {
+        display: flex;
+    }
 }

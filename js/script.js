@@ -31,3 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Inicializar a exibição
     showSlide(currentIndex);
 });
+
+
+
