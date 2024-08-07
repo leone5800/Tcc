@@ -8,7 +8,7 @@ body {
 
 header {
     
-    background-color: #067b31;
+    background-color: #3a3a3a;
     height: 110px;
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@ header > img {
 
 .titulo {
     font-size: 20px;
-    color: #ffdd25;
+    color: #fffffc;
     font-weight: normal;
     
 }
@@ -42,7 +42,7 @@ header > img {
 .titulo a {
     margin-left: 80px;
     text-decoration: none;
-    color: #ffdd25;
+    color: #fdfdfd;
 }
 
 header .titulo a {
@@ -51,7 +51,7 @@ header .titulo a {
 }
 
 header .titulo a:hover {
-    color: #a58f16;
+    color: #f7d204;
 }
 
 .pesquisa {
