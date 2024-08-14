@@ -5,54 +5,104 @@ body {
     background-color: #fffdff;
     margin: 0;
 }
-
-header {
-    
-    background-color: #3a3a3a;
-    height: 110px;
+/*header*/
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
-    box-sizing: border-box;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    height: 90px;
+    position: relative; /* Para o posicionamento absoluto do menu */
 }
 
-header > img {
-    width: 180px;
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
 }
 
-.titulos {
+.nav {
     display: flex;
-    width: 100%;
-    font-family: "IBM Plex Sans", sans-serif;
-    justify-content: end;
-    align-items: end;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 50px;
+    padding: 0;
+    justify-content: space-between;
     letter-spacing: 1px;
-    margin-right: 50px;
-    
-}
-
-.titulo {
     font-size: 20px;
-    color: #fffffc;
-    font-weight: normal;
+    display: flex;
+    font-family: 'Barlow Semi Condensed';
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+.nav-list a:hover{
+    color: #dde023;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
     
-}
+    .hamburger {
+        display: flex;
+    }
+    
+    .menu-active .nav {
+        display: block;
+        position: absolute;
+        top: 90px; /* Ajusta a posição do menu logo abaixo do header */
+        left: 0;
+        right: 0;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    }
 
-.titulo a {
-    margin-left: 80px;
-    text-decoration: none;
-    color: #fdfdfd;
-}
+    .menu-active .nav-list {
+        display: block;
+    }
 
-header .titulo a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+    .menu-active .nav-list li {
+        margin: 10px 0;
+        text-align: center;
+    }
 
-header .titulo a:hover {
-    color: #f7d204;
+    .menu-active .nav-list a {
+        font-size: 1.2em;
+    }
 }
+/*fim do header*/
+
+
+
+
 
 .pesquisa {
     display: flex;

@@ -1,3 +1,10 @@
+//header
+document.getElementById('hamburger').addEventListener('click', function() {
+    document.body.classList.toggle('menu-active');
+});
+//
+
+//carrosel
 document.addEventListener("DOMContentLoaded", function() {
     const slides = document.querySelectorAll(".carousel-slide");
     const prevButton = document.querySelector(".carousel-button.prev");
@@ -31,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Inicializar a exibição
     showSlide(currentIndex);
 });
+//
 
 
 
