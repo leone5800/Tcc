@@ -1,8 +1,15 @@
 /*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/*chave geral*/
+*{
+    h1{
+        font-family: "Bebas Neue", sans-serif;
+    }
+}
 body {
-    background-color: #fffdff;
+    background-color: rgb(221, 220, 220);
     margin: 0;
 }
 /*header*/
@@ -11,8 +18,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #1d1b1b;
+    color: #3a3a3a;
     height: 90px;
     position: relative; /* Para o posicionamento absoluto do menu */
 }
@@ -44,7 +51,7 @@ body {
 
 .nav-list a {
     text-decoration: none;
-    color: #fff;
+    color: #e9f4e8;
     font-size: 1em;
 }
 .nav-list a:hover{
@@ -79,7 +86,7 @@ body {
         top: 90px; /* Ajusta a posição do menu logo abaixo do header */
         left: 0;
         right: 0;
-        background-color: #333;
+        background-color: #131313;
         padding: 10px;
         border-radius: 5px;
         z-index: 1000; /* Garante que o menu fique acima de outros elementos */
@@ -202,7 +209,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Escurecimento */
+    background: rgba(0, 0, 0, 0.6); /* Escurecimento */
     z-index: 1;
 }
 
@@ -223,14 +230,19 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 500px;
     transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2em;
+    color: #21934b;
+    font-size: 80px;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     z-index: 2;
 }
+strong{
+    font-size: 38px;
+    color: #fff;
 
+}
 .carousel-slide.current .image-text {
     animation: slideUp 1s forwards;
 }
