@@ -41,4 +41,43 @@ document.addEventListener("DOMContentLoaded", function() {
 //
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const locSection = document.querySelector('.loc');
+    const animatedElements = document.querySelectorAll('.animate-up');
+    const button = document.querySelector('.btn');
+    let buttonInView = false;
+
+    const checkScroll = () => {
+        const locSectionTop = locSection.getBoundingClientRect().top;
+        const halfViewportHeight = window.innerHeight / 2;
+
+        // Verificar se a seção "loc" está visível na tela
+        if (locSectionTop < halfViewportHeight) {
+            animatedElements.forEach(element => {
+                element.classList.add('in-view');
+            });
+            buttonInView = true;
+        } else {
+            animatedElements.forEach(element => {
+                element.classList.remove('in-view');
+            });
+            buttonInView = false;
+        }
+    };
+
+    // Adicionar um ouvinte de evento de scroll à janela
+    window.addEventListener('scroll', () => {
+        checkScroll();
+        // Adicionar ou remover classe 'hide' no botão
+        if (buttonInView) {
+            button.classList.remove('hide');
+        } else {
+            button.classList.add('hide');
+        }
+    });
+
+    // Verificar a posição do scroll ao carregar a página
+    checkScroll();
+});
+
 

@@ -125,7 +125,6 @@ body {
 }
 
 .carousel-slide {
-    margin-top: 100px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -191,32 +190,26 @@ body {
     background: rgba(0, 0, 0, 0.6); /* Escurecimento */
     z-index: 1;
 }
-.preto{
+
+.preto {
     background-color: #272727;
-    height: 260px;
+    height: 180px;
     width: 100%;
     margin-top: -75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .marcas {
-    display: inline-block;
+    margin: 0 20px; /* Espaçamento entre as imagens */
 }
 
-.wesco {
-    display: inline;
-    
-}
-
+.marcas > img,
 .wesco > img {
-    width: 300px;
-    margin-left: 100px;
-    
-}
-
-.marcas > img {
-    width: 300px;
-    margin-left: 100px;
-    margin-top: 50px;
+    margin-top: 20px;
+    width: 250px; /* Tamanho fixo para todas as imagens */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 .carousel-slide.current > img {
@@ -338,4 +331,115 @@ strong{
 
 .produtos button:hover {
     background-color: #1a7438;
+}
+
+
+.loc {
+    position: relative;
+    margin-top: -500px;
+    height: 700px;
+    background-image: url(../img/2148138621.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.loc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.loc > h1 {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 90px;
+    font-family: 'Barlow Semi Condensed';
+    font-size: 50px;
+    color: #21934b;
+}
+
+.loc > p {
+    position: absolute;
+    bottom: 390px;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    color: white;
+    margin-bottom: 0;
+    font-size: 25px;
+    font-family: "Lato", sans-serif;
+    width: 580px;
+    margin-right: 150px;
+    margin-top: 0;
+}
+
+.loc > img {
+    position: relative;
+    z-index: 2;
+    width: 400px;
+    display: flex;
+    margin-top: -320px;
+    margin-left: 180px;
+    border-radius: 1rem;
+    border: solid #131313 3px;
+}
+
+.animate-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.in-view.animate-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.endereço {
+    display: flex;
+    width: 30px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+
+.botao {
+    display: flex;
+    justify-content: end;
+    margin-right: 300px;
+    margin-top: 200px;
+}
+
+.btn {
+    position: relative;
+    z-index: 2;
+    width: 200px;
+    height: 80px;
+    text-decoration: none;
+    padding: 5px 20px; 
+    background-color: transparent;
+    color: #21934b; /* Cor do texto do botão */
+    border-radius: 5px; 
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: solid #0c351b 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.btn:hover {
+    background-color: #0b331a;
+    color: #1c6938;
 }
