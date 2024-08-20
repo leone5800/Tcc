@@ -193,8 +193,30 @@ body {
 }
 .preto{
     background-color: #272727;
-    height: 150px;
+    height: 260px;
     width: 100%;
+    margin-top: -75px;
+}
+
+.marcas {
+    display: inline-block;
+}
+
+.wesco {
+    display: inline;
+    
+}
+
+.wesco > img {
+    width: 300px;
+    margin-left: 100px;
+    
+}
+
+.marcas > img {
+    width: 300px;
+    margin-left: 100px;
+    margin-top: 50px;
 }
 
 .carousel-slide.current > img {
