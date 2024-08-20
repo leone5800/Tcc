@@ -106,7 +106,16 @@ body {
     }
 }
 /*fim do header*/
-
+@media(max-width: 580px) {
+    .image-text>h1{
+        font-size: 33px;
+    }
+}
+@media(max-width: 700px) {
+    .image-text>h1{
+        font-size: 55px;
+    }
+}
 
 .carousel {
     position: relative;
@@ -182,6 +191,11 @@ body {
     background: rgba(0, 0, 0, 0.6); /* Escurecimento */
     z-index: 1;
 }
+.preto{
+    background-color: #272727;
+    height: 150px;
+    width: 100%;
+}
 
 .carousel-slide.current > img {
     animation: zoomIn 8s ease-in-out forwards;
@@ -203,7 +217,7 @@ body {
     width: 500px;
     transform: translate(-50%, -50%);
     color: #21934b;
-    font-size: 80px;
+    font-size: 60px;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     z-index: 2;
@@ -259,7 +273,7 @@ strong{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 700px;
+    margin-top: 70px;
 }
 
 .ofertas > h1 {
