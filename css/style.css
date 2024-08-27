@@ -443,3 +443,35 @@ strong{
     background-color: #0b331a;
     color: #1c6938;
 }
+
+
+.map-responsive{
+
+    
+
+    z-index: 1;
+
+    margin-left: 40px;
+
+    margin-top: -310px;
+
+    overflow:hidden;
+
+    padding-bottom:30.25%;
+
+    position:relative;
+
+    height: 0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+
+    position:absolute;
+
+}
