@@ -11,6 +11,7 @@
 body {
     background-color: #fff;
     margin: 0;
+    padding-top: 90px;
 }
 /*header*/
 .header {
@@ -21,7 +22,11 @@ body {
     background-color: #1d1b1b;
     color: #3a3a3a;
     height: 90px;
-    position: relative; /* Para o posicionamento absoluto do menu */
+    position: fixed; /* Fixa o cabeçalho na tela */
+    top: 0; /* Posiciona o cabeçalho no topo */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 }
 
 .logo a {
@@ -78,6 +83,7 @@ body {
     
     .hamburger {
         display: flex;
+        margin-right: 120px;
     }
     
     .menu-active .nav {
@@ -408,7 +414,7 @@ strong{
 .endereço {
     display: flex;
     width: 30px;
-    padding-right: 10px;
+    padding-right: 0px;
     padding-bottom: 30px;
 }
 
@@ -416,7 +422,7 @@ strong{
     display: flex;
     justify-content: end;
     margin-right: 300px;
-    margin-top: 200px;
+    margin-top: 10px;
 }
 
 .btn {
@@ -454,7 +460,7 @@ strong{
 
     margin-left: 40px;
 
-    margin-top: -310px;
+    margin-top: -350px;
 
     overflow:hidden;
 
@@ -476,3 +482,78 @@ strong{
     position:absolute;
 
 }
+
+.icons-container {
+    display: flex;
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    gap: 15px; /* Espaço entre os ícones */
+    margin-top: 10px; /* Espaço entre o parágrafo e os ícones */
+    margin-right: 100px; /* Alinha com o texto do parágrafo */
+    z-index: 2;
+    position: relative;
+    padding-top: 180px;
+}
+
+.icons {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto com o ícone */
+    text-decoration: none;
+    color: white; /* Cor do texto dos links */
+}
+
+/* Estiliza as imagens dentro dos links */
+.icons img {
+    margin-right: 5px; /* Espaço entre a imagem e o texto */
+}
+
+
+
+.hist {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131313;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    height: 450px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.6);
+    transition: transform 0.6s ease;
+    position: relative; /* Necessário para posicionar o texto em relação ao .hist */
+}
+
+.hist:hover {
+    transform: scale(1.1);
+}
+
+.hist > h1, .hist > p {
+    transition: transform 0.3s ease, color 0.3s ease; /* Transição suave para o efeito de desgrudar */
+    position: relative;
+    
+}
+
+.hist:hover > h1, .hist:hover > p {
+    transform: translateY(-10px);
+    
+}
+
+.hist > h1 {
+    text-align: center;
+    color: #21934b;
+    font-size: 25px;
+    margin-top: 80px;
+}
+
+.hist > p {
+    color: white;
+    text-align: center;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Barlow Semi Condensed';
+    font-size: 20px;
+    
+}
+
