@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Líder Equipamentos</title>
     <link rel="shortcut icon" href="../img/logo ruim.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/protudos.css">
+    <link rel="stylesheet" href="../css/contato.css">
 </head>
 <body>
     <header class="header">
@@ -26,6 +26,22 @@
             <div class="line"></div>
         </div>
     </header>
+
+    <section>
+        <h2>Contato</h2>
+        <form action="https://api.staticforms.xyz/submit" method="post">
+            <label>Nome</label>
+            <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+            <label>Mensagem</label>
+            <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+
+            <input type="hidden" name="accessKey" value="c174ea47-c282-4a7d-b50c-dda7aeebfdaf">
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/templates/obrigado.html">
+        </form>
+    </section>
     <script src="../js/produtos.js"></script>
 </body>
 </html>
