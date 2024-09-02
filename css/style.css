@@ -163,12 +163,12 @@ body {
 
 .carousel-button.prev {
     left: 10px;
-    top: 350px;
+    top: 250px;
 }
 
 .carousel-button.next {
     right: 10px;
-    top: 350px;
+    top: 250px;
 }
 
 .carousel-slide {
@@ -201,10 +201,11 @@ body {
     background-color: #272727;
     height: 180px;
     width: 100%;
-    margin-top: -75px;
+    margin-top: -263px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 90px;
 }
 
 .marcas {
@@ -458,7 +459,7 @@ strong{
 
     z-index: 1;
 
-    margin-left: 40px;
+    margin-left: 100px;
 
     margin-top: -350px;
 
@@ -510,50 +511,155 @@ strong{
 
 .hist {
     margin-top: 100px;
-    display: flex;
+    display: inline;
     flex-direction: column;
     align-items: center;
-    background-color: #131313;
-    width: 900px;
+    width:1100px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 50%;
     height: 450px;
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.6);
-    transition: transform 0.6s ease;
     position: relative; /* Necessário para posicionar o texto em relação ao .hist */
 }
 
-.hist:hover {
-    transform: scale(1.1);
-}
-
-.hist > h1, .hist > p {
-    transition: transform 0.3s ease, color 0.3s ease; /* Transição suave para o efeito de desgrudar */
-    position: relative;
-    
-}
-
-.hist:hover > h1, .hist:hover > p {
-    transform: translateY(-10px);
-    
-}
 
 .hist > h1 {
     text-align: center;
-    color: #21934b;
-    font-size: 25px;
-    margin-top: 80px;
+    color: rgba(243,221,40,245);
+    font-size: 35px;
+    margin-top: -580px;
+    margin-left: 580px;
 }
 
 .hist > p {
-    color: white;
+    color: black;
     text-align: center;
-    width: 600px;
-    margin-left: auto;
+    width: 1000px;
+    margin-left: 750px;
     margin-right: auto;
     font-family: 'Barlow Semi Condensed';
-    font-size: 20px;
+    font-size: 25px;
+    letter-spacing: 2px;
     
 }
 
+.coffe {
+    margin-top: 150px;
+    background-color: #131313;
+    width: 1100px;
+    height: 900px;
+    border-radius: 50%;
+    margin-left: -500px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+    background-attachment: fixed;
+}
+
+.coffe > img {
+    margin-left: 420px;
+    width: 600px;
+    margin-top: 100px;
+    background-attachment: fixed;
+}
+
+.rodape {
+    display: flex;
+    margin-top: 400px; 
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+}
+
+.roda {
+    background-color: #131313;
+    width: 700px;
+    height: 300px;
+    border-radius: 50%;
+    margin-left: -150px;
+}
+
+
+.roda2 {
+    background-color: #131313;
+    margin-top: -225px;
+    height: 300px;
+    width: 100%;
+}
+
+.roda2 > img {
+    width: 300px;
+    margin-bottom: -90px;
+    margin-left: 70px;
+    margin-top: -30px;
+    transition: transform 0.3s ease;
+}
+
+.roda2 > img:hover {
+    transform: scale(1.1);
+}
+
+.contatos {
+    display: grid;
+    grid-template-columns: repeat(2, max-content); /* Colunas com largura mínima necessária */
+    gap: 40px; /* Remove qualquer espaço entre as colunas */
+    margin-right: 0;
+    margin-top: -150px;
+    justify-content: center; /* Centraliza as colunas horizontalmente */
+}
+
+.contatos a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    color: #C98744;
+    border-bottom: 2px solid #C98744;
+    padding-bottom: 2px;
+    width: auto; /* Deixa a largura automática para se ajustar ao conteúdo */
+    font-size: 1em; /* Mantém o tamanho da fonte */
+    margin: 0; /* Remove qualquer margem lateral */
+}
+
+.contatos img {
+    margin-right: 8px;
+    width: 28px; /* Tamanho ajustado das imagens */
+    margin-bottom: 10px;
+}
+
+.contatos h1 {
+    font-size: 1em; /* Mantém o tamanho da fonte */
+    margin: 0;
+    margin-left: 8px; /* Espaço reduzido à esquerda do texto */
+    transition: color 0.3s;
+}
+
+/* Ajuste adicional para telas menores */
+@media screen and (max-width: 768px) {
+    .contatos {
+        grid-template-columns: 1fr; /* Em telas menores, exibe uma única coluna */
+    }
+
+    .contatos a {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+.contatos a:hover h1 {
+    color: #694724; /* Mudar a cor do h1 ao passar o mouse */
+}
+
+
+@media screen and (max-width: 1405px) {
+    .content2 > video {
+        left: 40px;
+    }
+
+    .content2 {
+        margin-right: 20px;
+    }
+
+    .historia2 > h1 {
+        margin-right: 100px;
+    }
+    
+}
