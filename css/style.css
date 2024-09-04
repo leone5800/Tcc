@@ -350,6 +350,14 @@ strong{
     border-radius: 8px;
     text-align: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(100px); /* Posiciona fora da tela, abaixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transições suaves */
+}
+
+.produtos.show {
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Move para a posição original */
 }
 
 .produtos img {
@@ -558,6 +566,20 @@ strong{
     margin-right: 5px; /* Espaço entre a imagem e o texto */
 }
 
+/* Elementos inicialmente invisíveis e deslocados para cima */
+.animate-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Classe adicionada para mostrar o elemento */
+.in-view.animate-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 
 .hist {
@@ -591,6 +613,17 @@ strong{
     font-size: 25px;
     letter-spacing: 2px;
     
+}
+
+.hist h1, .hist p, .hist img {
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(100px); /* Posiciona fora da tela, abaixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transições suaves */
+}
+
+.hist.show h1, .hist.show p, .hist.show img {
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Move para a posição original */
 }
 
 .coffe {

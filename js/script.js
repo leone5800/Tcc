@@ -103,3 +103,58 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const produtos = document.querySelectorAll('.produtos');
+
+    function checkScroll() {
+        produtos.forEach(function(produto) {
+            const produtoTop = produto.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
+
+            if (produtoTop < viewportHeight - 50) { // Adiciona um pequeno offset
+                produto.classList.add('show');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Verifica inicialmente se algum produto já está na tela
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const produtos = document.querySelectorAll('.produtos');
+    const hist = document.querySelector('.hist');
+
+    function checkScroll() {
+        produtos.forEach(function(produto) {
+            const produtoTop = produto.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
+
+            if (produtoTop < viewportHeight - 50) { // Adiciona um pequeno offset
+                produto.classList.add('show');
+            }
+        });
+
+        const histTop = hist.getBoundingClientRect().top;
+
+        if (histTop < window.innerHeight - 50) {
+            hist.classList.add('show');
+        }
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Verifica inicialmente se algum elemento já está na tela
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.animate-up');
+    
+    elements.forEach(function(element) {
+        element.classList.add('in-view');
+    });
+});
+
