@@ -3,6 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 /* Transição de saída (fade-out) */
 .fade-out {
     animation: fadeOut 0.5s forwards;
@@ -194,7 +195,7 @@ body {
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 10;      
 }
 
 .carousel-button.prev {
@@ -211,7 +212,7 @@ body {
     position: absolute;
     width: 100%;
     height: 500px;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .carousel-slide > img {
@@ -244,9 +245,13 @@ body {
     gap: 90px;
 }
 /*Preto responsivo*/
-@media(max-widht:100px){
+@media(max-widht:800px){
     .preto{
-        margin-top: -400px;
+        margin-top: -200px;
+    }
+    .marcas>img{
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -437,7 +442,8 @@ strong{
     z-index: 2;
     text-align: center;
     padding-top: 90px;
-    font-family: 'Barlow Semi Condensed';
+    font-family: "Abel", sans-serif;
+    font-weight: lighter;
     font-size: 50px;
     color: #21934b;
 }
