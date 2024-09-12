@@ -7,6 +7,51 @@ document.getElementById('hamburger').addEventListener('click', function() {
 //carrosel
 document.addEventListener("DOMContentLoaded", function() {
     const slides = document.querySelectorAll(".carousel-slide");
+    const nextButton = document.querySelector(".next");
+    const prevButton = document.querySelector(".prev");
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    const autoPlayInterval = 5000; // Tempo entre os slides (5 segundos)
+    let slideInterval;
+
+    // Função para mudar para o próximo slide (à direita)
+    function nextSlide() {
+        slides[currentSlide].classList.remove("current");
+        currentSlide = (currentSlide + 1) % totalSlides;
+        slides[currentSlide].classList.add("current");
+    }
+
+    // Função para iniciar o autoplay
+    function startAutoPlay() {
+        slideInterval = setInterval(nextSlide, autoPlayInterval);
+    }
+
+    // Função para parar o autoplay (se o usuário interagir)
+    function stopAutoPlay() {
+        clearInterval(slideInterval);
+    }
+
+    // Eventos para os botões de navegação
+    nextButton.addEventListener("click", () => {
+        stopAutoPlay();  // Pausa o autoplay ao clicar no botão
+        nextSlide();     // Muda para o próximo slide manualmente
+        startAutoPlay(); // Reinicia o autoplay
+    });
+
+    prevButton.addEventListener("click", () => {
+        stopAutoPlay();  // Pausa o autoplay ao clicar no botão
+        slides[currentSlide].classList.remove("current");
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        slides[currentSlide].classList.add("current");
+        startAutoPlay(); // Reinicia o autoplay
+    });
+
+    // Iniciar o autoplay ao carregar a página
+    startAutoPlay();
+});
+//
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll(".carousel-slide");
     const prevButton = document.querySelector(".carousel-button.prev");
     const nextButton = document.querySelector(".carousel-button.next");
     let currentIndex = 0;
