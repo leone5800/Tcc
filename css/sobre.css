@@ -145,16 +145,16 @@
 
 body{
     background: #eaeaea;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container{
     position: absolute;
-    top: 50%;
+    top: 390px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    height: 100%;
+    height: 600px;
     background: #f5f5f5;
     box-shadow: 0 30px 50px #dbdbdb;
 }
@@ -306,3 +306,70 @@ body{
     background: #ababab;
     color: #fff;
 }
+
+.hist {
+    display: flex;
+    flex-direction: column; /* Coloca as seções em coluna */
+    gap: 20px; /* Diminui o espaço entre as seções */
+    margin-top: 800px;
+}
+
+/* Estilização comum para as seções */
+.section-left, .section-right {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os elementos */
+    justify-content: space-between;
+    gap: 10px; /* Reduz o espaço entre a imagem e o texto */
+}
+
+/* Texto à esquerda, imagem à direita */
+.section-left {
+    flex-direction: row; /* Texto à esquerda, imagem à direita */
+    text-align: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+/* Texto à direita, imagem à esquerda */
+.section-right {
+    flex-direction: row-reverse; /* Texto à direita, imagem à esquerda */
+    text-align: center;
+    justify-content: center;
+    gap: 350px;
+}
+
+/* Estilos da imagem à direita */
+.right-image {
+    width: 500px;
+    height: auto;
+}
+
+/* Estilos da imagem curva à esquerda */
+.curved-image-container {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.curved-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 100% 25%, 75% 100%, 0% 75%);
+}
+
+/* Estilos dos textos (h1 em cima de p) */
+.text-content {
+    display: flex;
+    flex-direction: column; /* Mantém o h1 em cima do p */
+    max-width: 600px; /* Define uma largura máxima para o texto */
+    font-size: 20px;
+}
+
+.text-content h1 {
+    margin-bottom: 5px; /* Reduz o espaço entre o título e o parágrafo */
+    font-size: 35px;
+}
+
+
+
