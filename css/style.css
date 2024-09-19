@@ -242,7 +242,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 90px;
+    gap: 30px;
+}
+.marcas>img{
+    width: 20px;
+    height: 20px;
 }
 /*Preto responsivo*/
 @media(max-widht:800px){
