@@ -1,0 +1,197 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Fundo claro para melhor contraste */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Cor de fundo escura */
+  color: white;
+  padding: 10px 20px;
+}
+
+header .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffcc00; /* Amarelo */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #ffcc00; /* Amarelo no hover */
+  color: black;
+  border-radius: 5px;
+}
+
+.carousel {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffcc00; /* Amarelo para destacar a seção */
+  color: black;
+}
+
+.carousel-images {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-images img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: none;
+  border-radius: 10px; /* Bordas arredondadas para as imagens */
+}
+
+.carousel-images img:first-child {
+  display: block;
+}
+
+.sponsors {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sponsors img {
+  margin: 0 10px;
+  border: 2px solid #333; /* Borda escura para os patrocinadores */
+  border-radius: 5px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.product-card {
+  border: 1px solid #333; /* Borda escura */
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  transition: transform 0.2s;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+form label {
+  margin: 5px 0;
+}
+
+form input, form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #ffcc00; /* Amarelo ao focar nos campos */
+  outline: none;
+}
+
+form button {
+  padding: 10px;
+  background-color: #4caf50; /* Verde */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+}
+
+.testimonial {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin: 10px auto;
+  border-left: 4px solid #4caf50; /* Verde para a borda do depoimento */
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .sponsors {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+/* Adicione ao seu styles.css existente */
+
+.hamburger {
+  display: none; /* Inicialmente escondido */
+  cursor: pointer;
+  font-size: 28px; /* Tamanho do ícone */
+  color: white; /* Cor do ícone */
+}
+
+@media (max-width: 768px) {
+  nav ul {
+      display: none; /* Oculta o menu */
+      flex-direction: column; /* Coloca o menu em coluna */
+      position: absolute;
+      top: 60px; /* Ajuste para abaixo do cabeçalho */
+      left: 0;
+      background-color: #333; /* Fundo escuro */
+      width: 100%;
+      z-index: 10; /* Mantém o menu acima de outros elementos */
+  }
+
+  nav ul.show {
+      display: flex; /* Exibe o menu quando ativado */
+  }
+
+  .hamburger {
+      display: block; /* Mostra o ícone do hamburger em telas menores */
+  }
+}
+
