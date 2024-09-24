@@ -88,12 +88,12 @@ body {
 }
 
 .nav-list li {
-    margin: 0 15px;
+    margin: 20px;
 }
 
 .nav-list a {
     text-decoration: none;
-    color: #e9f4e8;
+    color: #ffffff;
     font-size: 1em;
 }
 .nav-list a:hover{
@@ -114,25 +114,45 @@ body {
 
 /* Responsividade */
 @media (max-width: 768px) {
+   
     .nav {
         display: none;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
     }
-    
+
     .hamburger {
         display: flex;
-        margin-right: 120px;
+        margin-right: 50px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 30px;
     }
-    
+
+    .hamburger div {
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    /* Animação do menu ao abrir */
     .menu-active .nav {
         display: block;
+        opacity: 1;
+        transform: translateY(0);
         position: absolute;
-        top: 90px; /* Ajusta a posição do menu logo abaixo do header */
+        top: 90px;
         left: 0;
         right: 0;
         background-color: #131313;
         padding: 10px;
         border-radius: 5px;
-        z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+        z-index: 1000;
+        height: 200px;
     }
 
     .menu-active .nav-list {
@@ -140,14 +160,45 @@ body {
     }
 
     .menu-active .nav-list li {
-        margin: 10px 0;
+        margin: 15px;
+        margin: auto;
         text-align: center;
+        display: flex;
     }
 
     .menu-active .nav-list a {
         font-size: 1.2em;
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+        animation-delay: 0.2s;
+    }
+
+    /* Animação do ícone de hambúrguer para um "X" ao abrir */
+    .menu-active .hamburger div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-active .hamburger div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-active .hamburger div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Animação de fade-in para os links do menu */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
+
 /*fim do header*/
 @media(max-width: 580px) {
     .image-text>h1{
@@ -165,6 +216,7 @@ body {
     width: 100%;
     overflow: hidden;
     margin: 0;
+    max-height: 500px;
 }
 
 .carousel-slide {
@@ -186,9 +238,10 @@ body {
     transform: translateX(-100%);
 }
 
+/* Botões de navegação */
 .carousel-button {
     position: absolute;
-    top: 250px;
+    top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -200,24 +253,17 @@ body {
 
 .carousel-button.prev {
     left: 10px;
-    top: 250px;
 }
 
 .carousel-button.next {
     right: 10px;
-    top: 250px;
 }
 
-.carousel-slide {
-    position: absolute;
-    width: 100%;
-    height: 500px;
-    overflow: hidden; 
-}
-
+/* Estilo das imagens */
 .carousel-slide > img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     transition: transform 1s ease-in-out;
     transform-origin: center center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
@@ -234,8 +280,39 @@ body {
     z-index: 1;
 }
 
+.image-text {
+    position: absolute;
+    left: 5%;
+    z-index: 2;
+    color: white;
+    background-color: rgba(182, 174, 174, 0);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel {
+        height:300px;
+    }
+    
+    .carousel-slide {
+        height: 300px;
+    }
+
+    .carousel-button {
+        padding: 5px;
+    }
+
+    .image-text {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+}
+
+
 #faixa-logos {
-    background-color: #000;
+    background-color:#202020;;
     padding: 20px 0;
     height: 170px;
   }
@@ -256,14 +333,18 @@ body {
 
   
   /* Responsividade para faixa de logos */
-  @media (max-width: 768px) {
+  @media (max-width: 708px) {
     .logos-container {
       flex-direction:column;
     }
     #faixa-logos {
-        background-color: #000;
+        background-color: #202020;
         padding: 20px 0;
-        height: 570px;
+       height: 420px;
+      }
+      .logos-container img{
+        width: 130px ;
+        height: 70px;
       }
   }
 
