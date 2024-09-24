@@ -234,41 +234,38 @@ body {
     z-index: 1;
 }
 
-.preto {
-    background-color: #272727;
-    height: 180px;
-    width: 100%;
-    margin-top: -53px;
+#faixa-logos {
+    background-color: #000;
+    padding: 20px 0;
+    height: 170px;
+  }
+  
+  .logos-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 30px;
-}
-.marcas>img{
-    width: 20px;
-    height: 20px;
-}
-/*Preto responsivo*/
-@media(max-widht:800px){
-    .preto{
-        margin-top: -200px;
-    }
-    .marcas>img{
-        width: 50px;
-        height: 50px;
-    }
-}
+  }
+  
+  .logos-container img {
+    max-width: 185px;
+    max-height: 185px;
+    margin: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
 
-.marcas {
-    margin: 0 20px; /* Espaçamento entre as imagens */
-}
-
-.marcas > img,
-.wesco > img {
-    margin-top: 20px;
-    width: 250px; /* Tamanho fixo para todas as imagens */
-    height: auto; /* Mantém a proporção da imagem */
-}
+  
+  /* Responsividade para faixa de logos */
+  @media (max-width: 768px) {
+    .logos-container {
+      flex-direction:column;
+    }
+    #faixa-logos {
+        background-color: #000;
+        padding: 20px 0;
+        height: 570px;
+      }
+  }
 
 .carousel-slide.current > img {
     animation: zoomIn 8s ease-in-out forwards;

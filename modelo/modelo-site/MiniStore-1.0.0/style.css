@@ -2,14 +2,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Fundo claro para melhor contraste */
+  background-color: #f4f4f4;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333; /* Cor de fundo escura */
+  background-color: #333;
   color: white;
   padding: 10px 20px;
 }
@@ -17,7 +17,7 @@ header {
 header .logo {
   font-size: 28px;
   font-weight: bold;
-  color: #ffcc00; /* Amarelo */
+  color: #ffcc00;
 }
 
 nav ul {
@@ -39,7 +39,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #ffcc00; /* Amarelo no hover */
+  background-color: #ffcc00;
   color: black;
   border-radius: 5px;
 }
@@ -47,7 +47,7 @@ nav ul li a:hover {
 .carousel {
   text-align: center;
   padding: 20px;
-  background-color: #ffcc00; /* Amarelo para destacar a seção */
+  background-color: #ffcc00;
   color: black;
 }
 
@@ -61,23 +61,35 @@ nav ul li a:hover {
   max-width: 800px;
   height: auto;
   display: none;
-  border-radius: 10px; /* Bordas arredondadas para as imagens */
+  border-radius: 10px;
 }
 
 .carousel-images img:first-child {
   display: block;
 }
 
-.sponsors {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+/* Nova faixa de logos */
+#faixa-logos {
+  background-color: #000;
+  padding: 20px 0;
 }
 
-.sponsors img {
+.logos-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logos-container img {
+  max-width: 150px;
   margin: 0 10px;
-  border: 2px solid #333; /* Borda escura para os patrocinadores */
-  border-radius: 5px;
+}
+
+/* Responsividade para faixa de logos */
+@media (max-width: 768px) {
+  .logos-container {
+    flex-direction: column;
+  }
 }
 
 .product-grid {
@@ -88,13 +100,13 @@ nav ul li a:hover {
 }
 
 .product-card {
-  border: 1px solid #333; /* Borda escura */
+  border: 1px solid #333;
   padding: 10px;
   text-align: center;
   background-color: white;
   transition: transform 0.2s;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .product-card:hover {
@@ -108,90 +120,30 @@ footer {
   color: white;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 20px auto;
-}
-
-form label {
-  margin: 5px 0;
-}
-
-form input, form textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form input:focus, form textarea:focus {
-  border-color: #ffcc00; /* Amarelo ao focar nos campos */
-  outline: none;
-}
-
-form button {
-  padding: 10px;
-  background-color: #4caf50; /* Verde */
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-form button:hover {
-  background-color: #45a049; /* Verde mais escuro ao passar o mouse */
-}
-
-.testimonial {
-  background-color: #f1f1f1;
-  padding: 10px;
-  margin: 10px auto;
-  border-left: 4px solid #4caf50; /* Verde para a borda do depoimento */
-  max-width: 600px;
-  border-radius: 5px;
-}
-
-@media (max-width: 600px) {
-  header {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .sponsors {
-      flex-direction: column;
-      align-items: center;
-  }
-}
-/* Adicione ao seu styles.css existente */
-
 .hamburger {
-  display: none; /* Inicialmente escondido */
+  display: none;
   cursor: pointer;
-  font-size: 28px; /* Tamanho do ícone */
-  color: white; /* Cor do ícone */
+  font-size: 28px;
+  color: white;
 }
 
 @media (max-width: 768px) {
   nav ul {
-      display: none; /* Oculta o menu */
-      flex-direction: column; /* Coloca o menu em coluna */
-      position: absolute;
-      top: 60px; /* Ajuste para abaixo do cabeçalho */
-      left: 0;
-      background-color: #333; /* Fundo escuro */
-      width: 100%;
-      z-index: 10; /* Mantém o menu acima de outros elementos */
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    z-index: 10;
   }
 
   nav ul.show {
-      display: flex; /* Exibe o menu quando ativado */
+    display: flex;
   }
 
   .hamburger {
-      display: block; /* Mostra o ícone do hamburger em telas menores */
+    display: block;
   }
 }
-
