@@ -537,7 +537,7 @@ strong{
 .botao {
     display: flex;
     justify-content: end;
-    margin-right: 300px;
+    margin-right: 450px;
     margin-top: 10px;
     border-radius: 10px;
 }
@@ -548,21 +548,32 @@ strong{
     width: 120px;
     height: 70px;
     text-decoration: none;
-    padding: 5px 20px; 
+    padding: 5px 20px;
     background-color: transparent;
     color: #ffffff; /* Cor do texto do botão */
-    border-radius: 25%; 
+    border-radius: 10px;
     text-align: center;
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    text-align: center;
     font-size: 15px;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     border: solid #ffffff 1px;
     box-shadow: 0px 2px 5px rgba(255, 255, 255, 0);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease; /* Suave para as transformações */
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Escurecimento mais suave */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Sombra mais intensa para o destaque */
+    transform: translate(-10px, -10px); /* Move o botão (e o texto junto) para a esquerda e para cima */
+}
+
+.btn span {
+    display: inline-block;
+    transition: transform 0.4s ease; /* Garantindo uma transição suave para o texto também */
 }
 
 
@@ -576,7 +587,7 @@ strong{
 
     margin-left: 100px;
 
-    margin-top: -350px;
+    margin-top: -300px;
 
     overflow:hidden;
 
@@ -603,7 +614,7 @@ strong{
     display: flex;
     justify-content: flex-end; /* Alinha os ícones à direita */
     gap: 15px; /* Espaço entre os ícones */
-    margin-top: 10px; /* Espaço entre o parágrafo e os ícones */
+    margin-top: -120px; /* Espaço entre o parágrafo e os ícones */
     margin-right: 100px; /* Alinha com o texto do parágrafo */
     z-index: 2;
     position: relative;
@@ -615,6 +626,8 @@ strong{
     align-items: center; /* Centraliza verticalmente o texto com o ícone */
     text-decoration: none;
     color: white; /* Cor do texto dos links */
+    letter-spacing: 1px;
+    font-family: 'Barlow Semi Condensed';
 }
 
 /* Estiliza as imagens dentro dos links */

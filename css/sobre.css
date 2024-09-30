@@ -298,14 +298,17 @@ body{
     border: none;
     cursor: pointer;
     margin: 0 5px;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     transition: 0.3s;
+    background-color: transparent;
+    color: white;
 }
 
 .button button:hover{
-    background: #ababab;
+    background: #000000;
     color: #fff;
 }
+
 
 .hist {
     display: flex;
@@ -346,8 +349,8 @@ body{
 
 /* Estilos da imagem curva à esquerda */
 .curved-image-container {
-    width: 300px;
-    height: 400px;
+    width: 500px;
+    height: 600px;
     overflow: hidden;
 }
 
@@ -358,18 +361,29 @@ body{
     clip-path: polygon(50% 0%, 100% 25%, 75% 100%, 0% 75%);
 }
 
-/* Estilos dos textos (h1 em cima de p) */
 .text-content {
+    position: relative; /* Para o posicionamento do pseudo-elemento */
     display: flex;
     flex-direction: column; /* Mantém o h1 em cima do p */
     max-width: 600px; /* Define uma largura máxima para o texto */
     font-size: 20px;
+    padding: 30px; /* Adiciona espaço interno */
+    background-color: #566E3D; /* Cor de fundo */
+    border-radius: 50px; /* Arredonda os cantos para parecer uma bolha */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adiciona sombra para profundidade */
+    color: white; /* Cor do texto */
+    overflow: hidden; /* Para esconder qualquer excesso */
+    font-family: 'Barlow Semi Condensed';
+    letter-spacing: 1px;
 }
 
 .text-content h1 {
     margin-bottom: 5px; /* Reduz o espaço entre o título e o parágrafo */
     font-size: 35px;
+    font-family: 'Barlow Semi Condensed';
+    left: 2px;
 }
+
 
 
 
