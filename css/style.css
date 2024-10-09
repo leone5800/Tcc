@@ -422,15 +422,23 @@ strong{
 }
 
 /*protudos*/
-
-.produtos > h2{
-    color: #21934b;
+.produtos >h2{
+    color: #23934c;
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
-    font-size: 38px;
-    padding-top: 70px
+    font-size: 37px;
+    padding-top: 70px;
+}
+
+.product-card>h3{
+    color: #085123;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    
 }
 .product-grid {
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
@@ -440,10 +448,19 @@ strong{
     width: 180px;
     height: 180px;
   }
+  .product-card>button{
+    background-color: #21934b;
+    color: white;
+    padding: 5px;
+    border-color: #ffffff;
+    border-radius: 5px;
+    height: 35px;
+    width: 75px;
+  }
   .product-card {
     border: 1px solid #3333332a;
     padding: 10px;
-    height: 300px;
+    height: 340px;
     text-align: center;
     background-color: white;
     transition: transform 0.2s;
@@ -456,193 +473,89 @@ strong{
   }
 /*fim protudos*/
 
+
+
 .loc {
-    position: relative;
-    margin-top: -500px;
-    height: 700px;
-    background-image: url(../img/2148138621.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.loc::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.loc > h1 {
-    position: relative;
-    z-index: 2;
-    padding-top: 30px;
-    text-align: center;
-    margin-bottom: 100px;
-    font-family: 'Barlow Semi Condensed';
-    font-weight: normal;
-    font-size: 50px;
-    color: #ffffff;
-}
-
-.loc > p {
-    position: absolute;
-    bottom: 390px;
-    right: 0;
-    z-index: 2;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    color: white;
-    margin-bottom: 0;
-    font-size: 25px;
-    font-family: "Lato", sans-serif;
-    width: 580px;
-    margin-right: 150px;
-    margin-top: 0;
-}
-
-.loc > img {
-    position: relative;
-    z-index: 2;
-    width: 400px;
-    display: flex;
-    margin-top: -320px;
-    margin-left: 180px;
-    border-radius: 1rem;
-    border: solid #131313 3px;
-}
-
-.animate-up {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.in-view.animate-up {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.endereço {
-    display: flex;
-    width: 30px;
-    padding-right: 0px;
-    padding-bottom: 30px;
-}
-
-.botao {
-    display: flex;
-    justify-content: end;
-    margin-right: 450px;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
-.btn {
-    position: relative;
-    z-index: 2;
-    width: 120px;
-    height: 70px;
-    text-decoration: none;
-    padding: 5px 20px;
-    background-color: transparent;
-    color: #ffffff; /* Cor do texto do botão */
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    font-size: 15px;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    border: solid #ffffff 1px;
-    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0);
-    transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease; /* Suave para as transformações */
-}
-
-.btn:hover {
-    background-color: rgba(0, 0, 0, 0.3); /* Escurecimento mais suave */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Sombra mais intensa para o destaque */
-    transform: translate(-10px, -10px); /* Move o botão (e o texto junto) para a esquerda e para cima */
-}
-
-.btn span {
-    display: inline-block;
-    transition: transform 0.4s ease; /* Garantindo uma transição suave para o texto também */
-}
-
-
-
-
-.map-responsive{
-
     
-
-    z-index: 1;
-
-    margin-left: 100px;
-
-    margin-top: -300px;
-
-    overflow:hidden;
-
-    padding-bottom:30.25%;
-
-    position:relative;
-
-    height: 0;
-
+    padding: 20px;
+    text-align: center;
+    background-image: url('../img/quadro.jpg'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra toda a seção */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: white; /* Altera a cor do texto para branco, para melhor contraste com o fundo */
 }
 
-.map-responsive iframe{
-
-    left:0;
-
-    top:0;
-
-
-    position:absolute;
-
+.frase {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .icons-container {
     display: flex;
-    justify-content: flex-end; /* Alinha os ícones à direita */
-    gap: 15px; /* Espaço entre os ícones */
-    margin-top: -120px; /* Espaço entre o parágrafo e os ícones */
-    margin-right: 100px; /* Alinha com o texto do parágrafo */
-    z-index: 2;
-    position: relative;
-    padding-top: 180px;
+    flex-wrap: wrap; /* Permite que os ícones se movam para a linha seguinte se não houver espaço */
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .icons {
     display: flex;
-    align-items: center; /* Centraliza verticalmente o texto com o ícone */
+    align-items: center;
+    margin: 10px; /* Espaçamento entre os ícones */
     text-decoration: none;
-    color: white; /* Cor do texto dos links */
-    letter-spacing: 1px;
-    font-family: 'Barlow Semi Condensed';
+    color: black; /* Altere a cor do texto como desejar */
 }
 
-/* Estiliza as imagens dentro dos links */
 .icons img {
-    margin-right: 5px; /* Espaço entre a imagem e o texto */
+    width: 30px; /* Defina um tamanho fixo para os ícones */
+    height: 30px; /* Defina um tamanho fixo para os ícones */
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
 }
 
-/* Elementos inicialmente invisíveis e deslocados para cima */
-.animate-up {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+.botao {
+    margin: 20px 0;
 }
+
+.btn {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.map-responsive {
+    overflow: hidden; /* Garante que o iframe não ultrapasse os limites */
+    padding-top: 56.25%; /* Proporção 16:9 */
+    position: relative;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px; /* Ocupa toda a largura do container */
+    height: 500px; /* Ocupa toda a altura do container */
+    border: 0; /* Remove bordas do iframe */
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .frase {
+        font-size: 1.5em; /* Reduz o tamanho do texto em telas menores */
+    }
+
+    .icons img {
+        width: 25px; /* Reduz o tamanho dos ícones em telas menores */
+        height: 25px; /* Reduz o tamanho dos ícones em telas menores */
+    }
+
+    .btn {
+        font-size: 18px; /* Ajusta o tamanho da fonte do botão em telas menores */
+    }
+}
+
 
 /* Classe adicionada para mostrar o elemento */
 .in-view.animate-up {
