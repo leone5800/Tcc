@@ -200,6 +200,7 @@ body {
 }
 
 /*fim do header*/
+
 @media(max-width: 580px) {
     .image-text>h1{
         font-size: 33px;
@@ -421,6 +422,7 @@ strong{
 }
 
 /*protudos*/
+
 .produtos > h2{
     color: #21934b;
     text-align: center;

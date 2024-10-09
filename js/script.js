@@ -1,4 +1,5 @@
 //header
+//hamburger
 document.getElementById('hamburger').addEventListener('click', function() {
     document.body.classList.toggle('menu-active');
 });
@@ -7,55 +8,13 @@ document.getElementById('hamburger').addEventListener('click', function() {
 //carrosel
 document.addEventListener("DOMContentLoaded", function() {
     const slides = document.querySelectorAll(".carousel-slide");
-    const nextButton = document.querySelector(".next");
-    const prevButton = document.querySelector(".prev");
-    let currentSlide = 0;
-    const totalSlides = slides.length;
-    const autoPlayInterval = 5000; // Tempo entre os slides (5 segundos)
-    let slideInterval;
-
-    // Função para mudar para o próximo slide (à direita)
-    function nextSlide() {
-        slides[currentSlide].classList.remove("current");
-        currentSlide = (currentSlide + 1) % totalSlides;
-        slides[currentSlide].classList.add("current");
-    }
-
-    // Função para iniciar o autoplay
-    function startAutoPlay() {
-        slideInterval = setInterval(nextSlide, autoPlayInterval);
-    }
-
-    // Função para parar o autoplay (se o usuário interagir)
-    function stopAutoPlay() {
-        clearInterval(slideInterval);
-    }
-
-    // Eventos para os botões de navegação
-    nextButton.addEventListener("click", () => {
-        stopAutoPlay();  // Pausa o autoplay ao clicar no botão
-        nextSlide();     // Muda para o próximo slide manualmente
-        startAutoPlay(); // Reinicia o autoplay
-    });
-
-    prevButton.addEventListener("click", () => {
-        stopAutoPlay();  // Pausa o autoplay ao clicar no botão
-        slides[currentSlide].classList.remove("current");
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        slides[currentSlide].classList.add("current");
-        startAutoPlay(); // Reinicia o autoplay
-    });
-
-    // Iniciar o autoplay ao carregar a página
-    startAutoPlay();
-});
-//
-document.addEventListener("DOMContentLoaded", function() {
-    const slides = document.querySelectorAll(".carousel-slide");
     const prevButton = document.querySelector(".carousel-button.prev");
     const nextButton = document.querySelector(".carousel-button.next");
     let currentIndex = 0;
+    const autoPlayInterval = 5000; // Tempo entre os slides (5 segundos)
+    let slideInterval;
 
+    // Função para exibir o slide
     const showSlide = (index) => {
         slides.forEach((slide, i) => {
             slide.classList.remove("current", "previous");
@@ -67,22 +26,46 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     };
 
+    // Função para o próximo slide
     const nextSlide = () => {
         currentIndex = (currentIndex + 1) % slides.length;
         showSlide(currentIndex);
     };
 
+    // Função para o slide anterior
     const prevSlide = () => {
         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
         showSlide(currentIndex);
     };
 
-    nextButton.addEventListener("click", nextSlide);
-    prevButton.addEventListener("click", prevSlide);
+    // Função para iniciar o autoplay
+    const startAutoPlay = () => {
+        slideInterval = setInterval(nextSlide, autoPlayInterval);
+    };
 
-    // Inicializar a exibição
-    showSlide(currentIndex);
+    // Função para parar o autoplay
+    const stopAutoPlay = () => {
+        clearInterval(slideInterval);
+    };
+
+    // Eventos dos botões de navegação
+    nextButton.addEventListener("click", () => {
+        stopAutoPlay();  // Pausa o autoplay ao clicar no botão
+        nextSlide();     // Muda para o próximo slide manualmente
+        startAutoPlay(); // Reinicia o autoplay
+    });
+
+    prevButton.addEventListener("click", () => {
+        stopAutoPlay();  // Pausa o autoplay ao clicar no botão
+        prevSlide();     // Muda para o slide anterior manualmente
+        startAutoPlay(); // Reinicia o autoplay
+    });
+
+    // Iniciar autoplay ao carregar a página
+    startAutoPlay();
+    showSlide(currentIndex); // Exibir o slide inicial
 });
+
 //
 
 

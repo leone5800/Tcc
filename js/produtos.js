@@ -1,3 +1,8 @@
+//hamburger
+document.getElementById('hamburger').addEventListener('click', function() {
+    document.body.classList.toggle('menu-active');
+});
+//
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-list a, .logo a');
 

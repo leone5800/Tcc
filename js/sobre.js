@@ -1,3 +1,8 @@
+//hamburger
+document.getElementById('hamburger').addEventListener('click', function() {
+    document.body.classList.toggle('menu-active');
+});
+//
 let next = document.querySelector('.next')
 let prev = document.querySelector('.prev')
 
