@@ -1,28 +1,15 @@
-/*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-/*chave geral*/
-*{
-    h1{
-        font-family: "Bebas Neue", sans-serif;
-    }
-}
 
-
-body {
-    background-color: #fff;
-    margin: 0;
-    padding-top: 90px;
-    display: flex;
-    justify-content: flex-start; /* Alinha o conteúdo no topo */
-    align-items: center;
-    height: 100vh; /* Garante que o conteúdo ocupe a altura total da tela */
-    flex-direction: column; /* Coloca os itens em uma coluna */
-}
-
-/*header*/
-.header {
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,12 +46,12 @@ body {
 }
 
 .nav-list li {
-    margin: 0 15px;
+    margin: 20px;
 }
 
 .nav-list a {
     text-decoration: none;
-    color: #e9f4e8;
+    color: #ffffff;
     font-size: 1em;
 }
 .nav-list a:hover{
@@ -169,83 +156,69 @@ body {
         }
     }
 }
+
 /*fim do header*/
-@media(max-width: 580px) {
-    .image-text>h1{
-        font-size: 33px;
-    }
-}
-@media(max-width: 700px) {
-    .image-text>h1{
-        font-size: 55px;
-    }
-}
-
-/* Transição de saída (fade-out) */
-.fade-out {
-    animation: fadeOut 0.5s forwards;
-}
-
-/* Transição de entrada (fade-in) */
-.fade-in {
-    animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    width: 100%;
-}
-
-.search-wrapper {
-    position: relative; /* Necessário para posicionar o ícone dentro da barra */
-}
-
-.search-bar {
-    padding: 10px 10px 10px 35px; /* Espaço à esquerda para o ícone */
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 1rem;
-    width: 400px;
-}
-
-.search-icon {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%); /* Centraliza verticalmente o ícone */
-    color: #ccc;
-}
-
-.search-button {
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-
+        .banner {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://via.placeholder.com/1200x300.png?text=Banner+de+Promoção');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner h1 {
+            color: white;
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-details {
+            padding: 15px;
+            text-align: center;
+        }
+        .product-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 16px;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+        .add-to-cart {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .add-to-cart:hover {
+            background-color: #218838;
+        }

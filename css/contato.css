@@ -246,7 +246,7 @@ section {
     display: flex;
     align-items: flex-start; /* Alinha os itens no início da seção */
     padding: 10px 45px;
-    background: #566E3D; /* Fundo preto com 50% de transparência */
+    background: #212121; /* Fundo preto com 50% de transparência */
     width: 1500px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
     border-radius: 1rem;

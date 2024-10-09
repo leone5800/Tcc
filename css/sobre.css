@@ -418,7 +418,7 @@ body{
     max-width: 600px; /* Define uma largura máxima para o texto */
     font-size: 20px;
     padding: 30px; /* Adiciona espaço interno */
-    background-color: #566E3D; /* Cor de fundo */
+    background-color: #ffffff; /* Cor de fundo */
     border-radius: 50px; /* Arredonda os cantos para parecer uma bolha */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adiciona sombra para profundidade */
     color: white; /* Cor do texto */

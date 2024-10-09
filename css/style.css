@@ -479,10 +479,6 @@ strong{
     
     padding: 20px;
     text-align: center;
-    background-image: url('../img/quadro.jpg'); /* Caminho para a imagem de fundo */
-    background-size: cover; /* Faz com que a imagem cubra toda a seção */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
     color: white; /* Altera a cor do texto para branco, para melhor contraste com o fundo */
 }
 
