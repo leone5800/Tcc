@@ -158,6 +158,8 @@
 }
 
 /*fim do header*/
+
+/*banner*/
         .banner {
             width: 100%;
             height: 400px;
@@ -173,6 +175,9 @@
             font-size: 48px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+/* fim banner*/
+
+        /*protudos*/
         .products {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -223,7 +228,7 @@
             background-color: #218838;
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
         body{
             line-height: 1.5;
             font-family: 'Poppins', sans-serif;
@@ -317,9 +322,3 @@
         }
         }
 
-
-
-
-
- 
-        
