@@ -403,6 +403,7 @@ body{
     height: 400px;
     overflow: hidden;
     margin-left: 230px;
+    margin-top: -50px;
 }
 
 .curved-image {
@@ -417,15 +418,16 @@ body{
     flex-direction: column; /* Mantém o h1 em cima do p */
     max-width: 600px; /* Define uma largura máxima para o texto */
     font-size: 20px;
-    padding: 30px; /* Adiciona espaço interno */
-    background-color: #ffffff; /* Cor de fundo */
-    border-radius: 50px; /* Arredonda os cantos para parecer uma bolha */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adiciona sombra para profundidade */
-    color: white; /* Cor do texto */
+    padding: 70px; /* Adiciona espaço interno */
+    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo */
+    border-radius: 2px; /* Arredonda os cantos para parecer uma bolha */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adiciona sombra para profundidade */
+    color: black; /* Cor do texto */
     overflow: hidden; /* Para esconder qualquer excesso */
     font-family: 'Barlow Semi Condensed';
     letter-spacing: 1px;
     margin-right: 90px;
+    margin-bottom: 70px;
 }
 
 .text-content h1 {
