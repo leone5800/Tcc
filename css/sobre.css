@@ -58,6 +58,11 @@
     font-size: 1.5em;
 }
 
+
+.logo a > img {
+    margin-top: 5px;
+}
+
 .nav {
     display: flex;
 }
@@ -364,7 +369,7 @@ body{
     display: flex;
     flex-direction: column; /* Coloca as seções em coluna */
     gap: 20px; /* Diminui o espaço entre as seções */
-    margin-top: 800px;
+    margin-top: 900px;
 }
 
 /* Estilização comum para as seções */
@@ -381,6 +386,7 @@ body{
     text-align: center;
     justify-content: center;
     gap: 200px;
+    
 }
 
 /* Texto à direita, imagem à esquerda */
@@ -400,7 +406,7 @@ body{
 /* Estilos da imagem curva à esquerda */
 .curved-image-container {
     width: 500px;
-    height: 400px;
+    height: 550px;
     overflow: hidden;
     margin-left: 230px;
     margin-top: -50px;
@@ -424,16 +430,16 @@ body{
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adiciona sombra para profundidade */
     color: black; /* Cor do texto */
     overflow: hidden; /* Para esconder qualquer excesso */
-    font-family: 'Barlow Semi Condensed';
+    font-family: "Caveat", cursive;
     letter-spacing: 1px;
     margin-right: 90px;
     margin-bottom: 70px;
 }
 
 .text-content h1 {
-    margin-bottom: 5px; /* Reduz o espaço entre o título e o parágrafo */
+    margin-bottom: 20px; /* Reduz o espaço entre o título e o parágrafo */
     font-size: 35px;
-    font-family: 'Barlow Semi Condensed';
+    font-family: "Caveat", cursive;
     left: 2px;
 }
 
