@@ -610,6 +610,7 @@ strong{
     .hist {
        margin-top: 200px;
        display: flex;
+       margin-bottom: -900px;
     }
 
     .hist > h1 {
@@ -617,6 +618,14 @@ strong{
         width: 300px;
         font-size: 25px;
         margin-top: -40px;
+    }
+
+    .paragrafo > p {
+        width: 200px;
+        text-align: center;
+        margin-right: 710px;
+        margin-top: 20px;
+        font-size: 17px;
     }
 
     .frase {
@@ -646,8 +655,8 @@ strong{
 
     .loc {
         width: 300px;
-        margin-top: 100px;
-        height: 1000px;
+        margin-top: 200px;
+        height: 1050px;
     }
 
 
@@ -664,16 +673,19 @@ strong{
     margin-left: 580px;
 }
 
-.hist > p {
-    color: black;
+.paragrafo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragrafo > p {
     text-align: center;
-    width: 1000px;
-    margin-left: 750px;
-    margin-right: auto;
-    font-family: 'Barlow Semi Condensed';
+    width: 500px;
+    margin-left: 570px;
+    margin-top: 30px;
     font-size: 25px;
-    letter-spacing: 2px;
-    
+    font-family: 'Barlow Semi Condensed';
 }
 
 .hist h1, .hist p, .hist img {
