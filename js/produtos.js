@@ -25,3 +25,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+const carousel = document.querySelector('.carousel');
+let currentIndex = 0;
+const totalItems = document.querySelectorAll('.product-card').length;
+const itemWidth = 250; // Largura do produto
+
+function updateCarousel() {
+    const maxTranslateX = 1100; // Limite máximo de pixels para o reset
+
+    // Calcula o deslocamento atual com base no índice e largura do item
+    const translateX = currentIndex * itemWidth;
+
+    // Verifica se ultrapassou o limite de 1200px
+    if (translateX >= maxTranslateX) {
+        currentIndex = 0; // Reseta para o início
+    }
+
+    // Atualiza o deslocamento do carrossel
+    carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;
+    updateCarousel();
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
+    updateCarousel();
+}
