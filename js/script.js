@@ -186,3 +186,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+const carousel = document.querySelector('.carousel');
+let currentIndex = 0;
+const totalItems = document.querySelectorAll('.product-card').length;
+
+function updateCarousel() {
+    const containerWidth = document.querySelector('.carousel-container').clientWidth;
+    const itemsPerView = Math.floor(containerWidth / 250);
+    const translateX = currentIndex * (containerWidth / itemsPerView);
+
+    carousel.style.transform = `translateX(-${translateX}px)`;
+}
+
+function prevSlide() {
+    const containerWidth = document.querySelector('.carousel-container').clientWidth;
+    const itemsPerView = Math.floor(containerWidth / 250);
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = totalItems - itemsPerView;
+    }
+    updateCarousel();
+}
+
+function nextSlide() {
+    const containerWidth = document.querySelector('.carousel-container').clientWidth;
+    const itemsPerView = Math.floor(containerWidth / 250);
+    if (currentIndex < totalItems - itemsPerView) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    updateCarousel();
+}
+
+window.addEventListener('resize', updateCarousel);
+updateCarousel();
+

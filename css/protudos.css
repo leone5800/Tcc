@@ -170,7 +170,7 @@ body {
         .banner {
             width: 100%;
             height: 400px;
-            background-image: url('https://via.placeholder.com/1200x300.png?text=Banner+de+Promoção');
+            background-image: url('https://th.bing.com/th/id/R.d3dfa14495c02aa62040f303e17dea26?rik=uSJlYxyA1SOOfw&riu=http%3a%2f%2fwww.acemetrix.com%2fwp-content%2fuploads%2f2015%2f08%2fblack-banner-vector3.png&ehk=FOMC3vW8xAbcFveAyixiaC196ccVLLzQl%2be%2bufM8GuI%3d&risl=&pid=ImgRaw&r=0');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -331,7 +331,7 @@ body {
 
 /*carrosel dos produtos*/
 .carousel-container {
-    width: 70%;
+    width: 57%;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -343,7 +343,8 @@ body {
 }
 
 .product-card {
-    min-width: 250px;
+    flex: 1 0 25%; /* 4 produtos por vez em telas maiores */
+    max-width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 10px;
@@ -395,4 +396,88 @@ body {
     color: #fff;
     padding: 10px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 0 50%; /* 2 produtos por vez em telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 1 0 100%; /* 1 produto por vez em telas pequenas */
+    }
+}
+
+
+
+/*corpo do elemenonto2 */
+body1 {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1200px;
+    width: 100%;
+}
+
+.cardd {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cardd-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.cardd-content h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.cardd-content p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #666;
+}
+
+.cardd-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.cardd-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    min-height: 200px;
+}
+
+.cardd-text {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
 }
