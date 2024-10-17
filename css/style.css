@@ -1,9 +1,9 @@
 /*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 /* Transição de saída (fade-out) */
 .fade-out {
     animation: fadeOut 0.5s forwards;
@@ -501,69 +501,125 @@ strong{
 
 
 /*mapa */
-.loc {
-    background-color: #ffffff;
-    width: 900px;
-    padding: 20px;
-    margin: auto;
-    text-align: center;
-    color: white; 
-    margin-top:60px;
-}
-
-.frase {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.icons-container {
+.caixa-mapa {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.icons {
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    margin: 10px; 
+    justify-content: space-between;
+    background-image: linear-gradient(to right, rgb(48, 48, 48), rgb(19, 19, 19));
+    margin: 20px auto;
+    width: 100%;
+    height: 320px;
+    max-width: 1300px;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.377);
+    overflow: hidden;
+}
+
+/* Estilo para o Google Maps */
+.mapa-container {
+    flex: 2;
+}
+
+#map {
+    width: 100%;
+    height: 320px;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 20px;
+}
+.info>h1{
+    margin-top: 8px;
+    font-size: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: normal;
+    background: linear-gradient(45deg, #00fa7de1, #ffffff);
+    -webkit-background-clip: text; /* Aplica o clip ao texto */
+    -webkit-text-fill-color: transparent; /* Preenche o texto com o degradê */
+
+    
+}
+.subtitle {
+    margin-top: 100px;
+    font-size: 17px;
+    
+    
+}
+.subtitle a {
+    color: white;
     text-decoration: none;
-    color: black; 
+    font-family: 'Barlow Semi Condensed';
+    font-weight:lighter;
+    
 }
 
-.icons img {
-    width: 30px; 
-    height: 30px; 
-    margin-right: 8px; 
+
+.icons-mapa {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 100px;
+    
 }
 
-.botao {
-    margin: 20px 0;
+.icons-mapa a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
 }
 
-.btn {
-    padding: 10px 20px;
-    background-color: #4CAF50; 
-    color: white; 
-    border: none;
-    border-radius: 5px;
-    text-decoration: none; 
+.icons-mapa a:hover img {
+    transform: scale(1.1);
+}
+/*animação  dos elementos*/
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.map-responsive {
-    overflow: hidden; 
-    padding-top: 56.25%; 
-    position: relative;
+.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.map-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 800px; 
-    height: 500px; 
-    border: 0; 
+/* Responsividade */
+@media (max-width: 868px) {
+    .caixa-mapa {
+        flex-direction: column;
+        height: 705px;
+        width: 500px;
+    }
+    .info{
+        margin-top: 230px;
+    }
+    .info>h1{
+        margin-top: 10px;
+    }
+    .subtitle {
+        margin-top: 40px;
+        font-size: 18px;
+    }
+    #map {
+        height: 200px;
+    }
+
+    .icons-mapa {
+        flex-direction: row;
+        position: relative;
+    }
+    
 }
+
+
+/*fim do mapa */
 
 /* Media Queries para telas menores */
 @media (max-width: 768px) {
@@ -738,7 +794,7 @@ ul{
     list-style: none;
 }
 .footer{
-    margin-top: 600px;
+    margin-top: 650px;
     background-color: #24262b;
     padding: 70px 0;
     font-family: Arial, Helvetica, sans-serif;
